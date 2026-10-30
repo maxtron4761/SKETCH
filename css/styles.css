@@ -1,0 +1,115 @@
+/* ===== Sketch Cafe — shared styles (tokens, base, header, footer, buttons) ===== */
+:root {
+  --bg: #fdf9f3;
+  --bg-alt: #faf6f1;
+  --card: #f7f3ed;
+  --chip: #f2ebe0;
+  --ink: #2c1810;
+  --ink-soft: #53443b;
+  --muted: #6b554b;
+  --muted-2: #685950;
+  --accent: #c47a47;
+  --accent-dark: #8b4c1d;
+  --border: #e8ded2;
+  --border-soft: #f0e6da;
+  --border-warm: #d8c2b6;
+  --white: #fff;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --shadow: 0 8px 24px rgba(44, 24, 16, 0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+main { flex: 1; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { font-family: var(--font-serif); font-weight: 600; }
+em { font-style: italic; color: var(--accent); }
+.container { width: min(1240px, 100% - 40px); margin-inline: auto; }
+
+/* ----- Header ----- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(253, 249, 243, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+}
+.site-header__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; min-height: 76px; padding: 8px 24px; flex-wrap: wrap;
+}
+.brand { display: flex; flex-direction: column; line-height: 1.1; }
+.brand__name {
+  font-family: var(--font-serif); font-weight: 700; font-size: 20px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.brand__name span { color: var(--accent); margin-right: 6px; }
+.brand__sub {
+  margin-top: 4px; font-size: 9px; font-weight: 600;
+  letter-spacing: 0.22em; color: var(--muted);
+}
+.nav {
+  display: flex; gap: 4px; padding: 5px;
+  background: var(--chip); border: 1px solid var(--border); border-radius: 9999px;
+}
+.nav a {
+  padding: 7px 18px; border-radius: 9999px;
+  font-size: 13px; font-weight: 500; color: var(--muted);
+}
+.nav a.is-active {
+  background: var(--white); color: var(--ink); font-weight: 600;
+  box-shadow: 0 1px 4px rgba(44, 24, 16, 0.12);
+}
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.cart-pill {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px;
+  background: var(--chip); border: 1px solid var(--border); border-radius: 9999px;
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.cart-pill__count {
+  display: grid; place-items: center; width: 18px; height: 18px;
+  background: var(--accent); color: #fff; border-radius: 50%; font-size: 10px; font-weight: 700;
+}
+.avatar {
+  display: grid; place-items: center; width: 34px; height: 34px;
+  background: var(--accent); color: #fff; border-radius: 50%;
+}
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 30px; border: 1px solid transparent; border-radius: 9999px;
+  font: 600 13px var(--font-sans); letter-spacing: 0.06em; text-transform: uppercase;
+  cursor: pointer; transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn--primary { background: var(--accent-dark); color: #fff; box-shadow: 0 6px 16px rgba(139, 76, 29, 0.28); }
+.btn--primary:hover { background: #7a4217; }
+.btn--light { background: #fff; color: var(--ink); border-color: var(--border); box-shadow: 0 2px 8px rgba(44, 24, 16, 0.06); }
+.btn--sm { padding: 9px 20px; font-size: 12px; }
+
+/* ----- Footer ----- */
+.site-footer { background: var(--card); border-top: 1px solid var(--border); padding: 24px 0; }
+.site-footer__inner {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px; flex-wrap: wrap; padding: 0 24px;
+  font-size: 13px; color: var(--muted-2);
+}
+.site-footer__tag { font-size: 11px; letter-spacing: 0.1em; }
+
+@media (max-width: 860px) {
+  .nav { order: 3; width: 100%; justify-content: center; }
+}

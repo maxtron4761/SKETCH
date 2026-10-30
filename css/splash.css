@@ -1,0 +1,16 @@
+/* Splash / welcome (standalone) */
+body { background: #1e1e1e; color: #fff; }
+.splash {
+  min-height: 100vh; display: flex; align-items: center;
+  background: #1e1e1e url("../images/chalkboard.jpg") center / cover no-repeat;
+}
+.splash__text { display: flex; flex-direction: column; align-items: flex-start; padding: 40px 6vw; width: min(640px, 100%); font-family: "Jacques Francois Shadow", var(--font-serif); line-height: 1; }
+.splash__sketch { font-size: clamp(56px, 9vw, 96px); align-self: flex-end; margin-right: 80px; }
+.splash__cafe { font-size: clamp(72px, 12vw, 128px); margin-left: 8vw; }
+.splash__by { font-size: clamp(56px, 9vw, 96px); align-self: flex-start; margin-left: 4vw; }
+.splash__logo { width: min(504px, 100%); margin-top: 24px; }
+.splash__enter {
+  margin-top: 28px; padding: 12px 32px; border: 1px solid rgba(255,255,255,.7); border-radius: 9999px;
+  font: 600 14px var(--font-sans); letter-spacing: .1em; text-transform: uppercase; color: #fff;
+}
+.splash__enter:hover { background: #fff; color: #1e1e1e; }

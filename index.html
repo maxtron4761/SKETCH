@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home — Sketch Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__name"><span>&#9749;</span>Sketch Cafe</span>
+        <span class="brand__sub">BY APOLLO SINDOORI</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html" class="is-active">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="cart-pill" href="cart.html" aria-label="View cart">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+          Cart <span class="cart-pill__count">0</span>
+        </a>
+        <a class="btn btn--primary btn--sm" href="reserve.html">Reserve Table</a>
+        <a class="avatar" href="login.html" aria-label="Sign in">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero__bg" role="img" aria-label="Sketch Cafe artisanal interior"></div>
+      <div class="container hero__content">
+        <h1>Welcome to<br><em>Sketch</em> Cafe</h1>
+        <p>Handcrafted coffee, fresh pastries, and good vibes — all one click away. A cozy sanctuary designed to refresh, recharge, and create your own story.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="menu.html">Order Now <span aria-hidden="true">&rarr;</span></a>
+          <a class="btn btn--light" href="reserve.html">Book a Table</a>
+        </div>
+      </div>
+    </section>
+    <section class="features">
+      <div class="container features__grid">
+        <article class="feature">
+          <span class="feature__icon">&#9749;</span>
+          <h3>Fresh Brews</h3>
+          <p>Specialty coffees roasted in-house daily with carefully selected beans.</p>
+        </article>
+        <article class="feature">
+          <span class="feature__icon">&#129360;</span>
+          <h3>Baked Fresh</h3>
+          <p>Artisanal pastries, croissants, and sourdough baked every morning.</p>
+        </article>
+        <article class="feature">
+          <span class="feature__icon">&#128663;</span>
+          <h3>Quick Pickup</h3>
+          <p>Order your favorites ahead of time and skip the waiting line.</p>
+        </article>
+        <article class="feature">
+          <span class="feature__icon">&#128179;</span>
+          <h3>Easy Payment</h3>
+          <p>Fast, seamless, and secure checkout in just a few taps.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="contact">
+    <div class="container site-footer__inner">
+      <p>&copy; 2025 Sketch Cafe by Apollo Sindoori. All rights reserved.</p>
+      <p class="site-footer__tag">ARTISANAL DINING &amp; SLOW BREWS</p>
+    </div>
+  </footer>
+</body>
+</html>

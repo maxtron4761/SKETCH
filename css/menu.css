@@ -1,0 +1,17 @@
+/* Menu */
+body { background: #f6efe6; }
+.menu-hero { text-align: center; padding: 48px 20px 8px; }
+.menu-hero__star { display: block; color: var(--accent); font-size: 13px; margin-bottom: 4px; }
+.menu-hero h1 { font-size: clamp(40px, 6vw, 62px); color: #241d18; line-height: 1.15; }
+.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; align-items: start; padding: 24px 24px 64px; width: min(1240px, 100%); }
+.menu-col { display: flex; flex-direction: column; gap: 32px; }
+.menu-card { background: #fffdf9; border: 1px solid #e5dac8; border-radius: 16px; padding: 32px 36px; box-shadow: var(--shadow); }
+.menu-card__time { color: var(--accent-dark); font-size: 11.5px; font-weight: 700; letter-spacing: .12em; margin-bottom: 6px; }
+.menu-card h2 { font-size: 28px; color: #241d18; margin-bottom: 18px; }
+.menu-list { list-style: none; margin: 0; padding: 0; }
+.menu-item { display: flex; align-items: baseline; gap: 10px; padding: 9px 0; }
+.menu-item__name { font-family: var(--font-serif); font-weight: 500; font-size: 20px; color: #241d18; }
+.menu-item__dots { flex: 1; border-bottom: 1px dotted #cdbfae; transform: translateY(-4px); }
+.menu-item__price { font-family: var(--font-serif); font-weight: 600; font-size: 20px; color: var(--accent-dark); letter-spacing: .02em; }
+.menu-item__price small { font: 500 18px var(--font-sans); margin-right: 1px; }
+@media (max-width: 860px) { .menu-grid { grid-template-columns: 1fr; } }

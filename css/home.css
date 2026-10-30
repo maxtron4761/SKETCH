@@ -1,0 +1,27 @@
+/* Home */
+.hero { position: relative; min-height: 580px; display: flex; align-items: center; background: var(--bg-alt); overflow: hidden; }
+.hero__bg {
+  position: absolute; inset: 0;
+  background: url("../images/hero-cafe.jpg") center / cover no-repeat;
+}
+.hero__bg::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(250,246,241,.96) 0%, rgba(250,246,241,.82) 45%, rgba(250,246,241,.15) 100%);
+}
+.hero__content { position: relative; padding: 100px 32px; max-width: 1240px; }
+.hero h1 { font-size: clamp(38px, 5vw, 56px); line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 19px; }
+.hero p { max-width: 520px; color: var(--muted); font-size: 17px; letter-spacing: .01em; opacity: .9; }
+.hero__actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+
+.features { padding: 96px 0; border-top: 1px solid var(--border); }
+.features__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; padding: 0 12px; }
+.feature {
+  background: #fff; border: 1px solid var(--border-soft); border-radius: 16px;
+  padding: 40px 28px; text-align: center; box-shadow: var(--shadow);
+}
+.feature__icon {
+  display: grid; place-items: center; width: 56px; height: 56px; margin: 0 auto 18px;
+  background: #f5eee4; border: 1px solid var(--border-soft); border-radius: 50%; font-size: 24px;
+}
+.feature h3 { font-size: 19px; margin-bottom: 8px; }
+.feature p { color: var(--muted); font-size: 14px; }

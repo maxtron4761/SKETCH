@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In — Sketch Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <main class="login">
+    <div class="login__wrap">
+      <header class="login__head">
+        <h1>Welcome</h1>
+        <p>Sign in to manage reservations and orders</p>
+      </header>
+      <section class="login__card">
+        <form action="#">
+          <div class="field">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="name@example.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" placeholder="Enter your password" autocomplete="current-password">
+          </div>
+          <div class="login__row">
+            <label class="check"><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button class="login__submit" type="submit">Sign In <span aria-hidden="true">&rarr;</span></button>
+        </form>
+        <p class="login__alt">Don't have an account? <a href="#">Sign up</a></p>
+      </section>
+      <a class="login__back" href="index.html">&larr; Return to Home</a>
+    </div>
+  </main>
+</body>
+</html>
