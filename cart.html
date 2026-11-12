@@ -18,10 +18,10 @@
         <span class="brand__sub">BY APOLLO SINDOORI</span>
       </a>
       <nav class="nav" aria-label="Main">
-        <a href="index.html">Home</a>
-        <a href="menu.html">Menu</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+</nav>
       <div class="header-actions">
         <a class="cart-pill" href="cart.html" aria-label="View cart">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
@@ -36,77 +36,46 @@
   </header>
   <main class="container cart">
     <h1 class="page-title">Your Cart</h1>
+
     <div class="cart__grid">
-      <section class="cart__items" aria-label="Order items">
-        <article class="cart-item">
-          <div class="cart-item__info">
-            <span class="cart-item__icon">&#129747;</span>
-            <h2>Paneer Paratha</h2>
-          </div>
-          <div class="cart-item__controls">
-            <div class="qty">
-              <button class="qty__btn" aria-label="Decrease Paneer Paratha">&minus;</button>
-              <span class="qty__value">2</span>
-              <button class="qty__btn" aria-label="Increase Paneer Paratha">+</button>
+        <section class="cart__items" aria-label="Order items">
+
+            <div id="cartItems"></div>
+
+            <p id="emptyCart" style="display:none;">
+                Your cart is empty!
+            </p>
+
+            <a class="back-link" href="menu.html">
+                &larr; Continue Shopping
+            </a>
+
+        </section>
+
+        <aside class="summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary__total">
+                <div>
+                    <strong>Subtotal</strong>
+                    <small>GST calculated at checkout</small>
+                </div>
+
+                <span id="cartSubtotal">&#8377;0.00</span>
             </div>
-            <span class="cart-item__total">&#8377;104.00</span>
-            <button class="cart-item__remove" aria-label="Remove Paneer Paratha">&times;</button>
-          </div>
-        </article>
-        <article class="cart-item">
-          <div class="cart-item__info">
-            <span class="cart-item__icon">&#129374;</span>
-            <h2>Masala Dosa</h2>
-          </div>
-          <div class="cart-item__controls">
-            <div class="qty">
-              <button class="qty__btn" aria-label="Decrease Masala Dosa">&minus;</button>
-              <span class="qty__value">1</span>
-              <button class="qty__btn" aria-label="Increase Masala Dosa">+</button>
-            </div>
-            <span class="cart-item__total">&#8377;63.00</span>
-            <button class="cart-item__remove" aria-label="Remove Masala Dosa">&times;</button>
-          </div>
-        </article>
-        <article class="cart-item">
-          <div class="cart-item__info">
-            <span class="cart-item__icon">&#9898;</span>
-            <h2>Idli Sambhar (2 pcs)</h2>
-          </div>
-          <div class="cart-item__controls">
-            <div class="qty">
-              <button class="qty__btn" aria-label="Decrease Idli Sambhar (2 pcs)">&minus;</button>
-              <span class="qty__value">1</span>
-              <button class="qty__btn" aria-label="Increase Idli Sambhar (2 pcs)">+</button>
-            </div>
-            <span class="cart-item__total">&#8377;47.00</span>
-            <button class="cart-item__remove" aria-label="Remove Idli Sambhar (2 pcs)">&times;</button>
-          </div>
-        </article>
-        <a class="back-link" href="menu.html">&larr; Continue Shopping</a>
-      </section>
-      <aside class="summary">
-        <h2>Order Summary</h2>
-        <form class="coupon" action="#">
-          <label for="code">VOUCHER OR MEMBERSHIP CODE</label>
-          <div class="coupon__row">
-            <input id="code" type="text" placeholder="Enter code">
-            <button type="button">Apply</button>
-          </div>
-        </form>
-        <div class="summary__total">
-          <div><strong>Subtotal</strong><small>GST calculated at checkout</small></div>
-          <span>&#8377;214</span>
-        </div>
-        <a class="btn btn--primary cta" href="checkout.html">Proceed to Payment <span aria-hidden="true">&rarr;</span></a>
-      </aside>
+
+            <a class="btn btn--primary cta" href="checkout.html">
+                Proceed to Payment <span aria-hidden="true">&rarr;</span>
+            </a>
+        </aside>
     </div>
-  </main>
+</main>
   <footer class="site-footer" id="contact">
     <div class="container site-footer__inner">
       <p>&copy; 2025 Sketch Cafe by Apollo Sindoori. All rights reserved.</p>
       <p class="site-footer__tag">ARTISANAL DINING &amp; SLOW BREWS</p>
     </div>
   </footer>
+  <script src="js/cart.js"></script>
 </body>
 </html>

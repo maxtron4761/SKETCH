@@ -20,7 +20,7 @@
       <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="menu.html">Menu</a>
-        <a href="#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </nav>
       <div class="header-actions">
         <a class="cart-pill" href="cart.html" aria-label="View cart">
@@ -39,29 +39,48 @@
     <div class="badge" aria-hidden="true">
       <svg width="30" height="22" viewBox="0 0 27 20" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l8 8L25 2"/></svg>
     </div>
-    <span class="chip">ORDER RECEIVED &bull; #SC-89241</span>
+   <span class="chip">ORDER RECEIVED</span>
     <h1>Order Confirmed!</h1>
-    <p class="confirmed__lead">We’ll have your handcrafted order ready for pickup. A confirmation email and SMS have been dispatched.</p>
+    <p class="confirmed__lead">
+  Your order has been successfully placed. Thank you for choosing Sketch Cafe!
+</p>
     <section class="receipt">
-      <header><span>PICKUP STATION &bull; COUNTER 01</span><b>Paid</b></header>
+      <header><span>PICKUP STATION &bull; COUNTER 01</span><b>Order Placed</b></header>
       <div class="receipt__body">
-        <div class="receipt__meta">
-          <div><small>GUEST DETAILS</small><strong>GAUTAM GUPTA</strong></div>
-          <div><small>ESTIMATED PICKUP</small><strong class="accent">ASAP (15–20 min)</strong></div>
-        </div>
+        <div>
+  <small>GUEST DETAILS</small>
+  <strong id="guestName">Guest</strong>
+  <small id="guestEmail"></small>
+</div>
+
+<div>
+  <small>ESTIMATED PICKUP</small>
+  <strong class="accent" id="pickupTime">Not selected</strong>
+</div>
         <div class="receipt__items">
-          <div class="receipt__cols"><span>HANDCRAFTED ITEMS</span><span>AMOUNT</span></div>
-          <ul>
-            <li><span class="qtybox">2</span><div><strong>Paneer Paratha</strong><small>Spiced cottage cheese filling • Curd &amp; pickle</small></div><b>&#8377;104.00</b></li>
-            <li><span class="qtybox">1</span><div><strong>Masala Dosa</strong><small>Crispy rice crepe • Potato masala • Chutneys</small></div><b>&#8377;63.00</b></li>
-            <li><span class="qtybox">1</span><div><strong>Idli Sambhar (2 pcs)</strong><small>Steamed rice cakes • Aromatic lentil stew</small></div><b>&#8377;47.00</b></li>
-          </ul>
-        </div>
-        <div class="totals">
-          <p><span>Subtotal</span><span>₹214.00</span></p>
-          <p><span>GST (5%)</span><span>₹10.70</span></p>
-          <p class="totals__grand"><span>Total Paid</span><strong>₹224.70</strong></p>
-        </div>
+  <div class="receipt__cols">
+    <span>ORDER ITEMS</span>
+    <span>AMOUNT</span>
+  </div>
+
+  <ul id="confirmedItems"></ul>
+</div>
+       <div class="totals">
+  <p>
+    <span>Subtotal</span>
+    <span id="confirmedSubtotal">₹0.00</span>
+  </p>
+
+  <p>
+    <span>GST (5%)</span>
+    <span id="confirmedGST">₹0.00</span>
+  </p>
+
+  <p class="totals__grand">
+    <span>Order Total</span>
+    <strong id="confirmedTotal">₹0.00</strong>
+  </p>
+</div>
       </div>
     </section>
     <div class="confirmed__actions">
@@ -75,5 +94,6 @@
       <p class="site-footer__tag">ARTISANAL DINING &amp; SLOW BREWS</p>
     </div>
   </footer>
+  <script src="js/order-confirmed.js"></script>
 </body>
 </html>
